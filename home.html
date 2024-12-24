@@ -1,0 +1,119 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Home - Promptly.ai</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js"></script>
+ </head>
+ <body class="bg-gray-50 font-sans">
+  <div class="flex h-screen">
+    <!-- Sidebar (same as index.html) -->
+    <div class="w-64 bg-gray-100 p-4 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center mb-6">
+          <img alt="Promptly.ai logo" class="mr-2" height="24" src="https://storage.googleapis.com/a1aa/image/G3eEgeLbKWmYOEpUARAheaefnYE0WZQefXpbiK5fFee5JWH4PB.jpg" width="24"/>
+          <span class="text-xl font-semibold">promptly.ai</span>
+        </div>
+        <button class="bg-white border border-gray-300 text-gray-700 py-2 px-4 rounded mb-6 flex items-center">
+          <span>New Thread</span>
+          <kbd class="ml-2 bg-gray-200 text-gray-500 px-2 py-1 rounded">Ctrl I</kbd>
+        </button>
+        <nav class="space-y-4">
+          <a class="flex items-center text-gray-700 hover:text-gray-900" href="index.html">
+            <i class="fas fa-home mr-2"></i>Home
+          </a>
+          <a class="flex items-center text-teal-600" href="#">
+            <i class="fas fa-globe mr-2"></i>Discover
+          </a>
+          <a class="flex items-center text-gray-700 hover:text-gray-900" href="#">
+            <i class="fas fa-star mr-2"></i>Spaces
+          </a>
+          <a class="flex items-center text-gray-700 hover:text-gray-900" href="#">
+            <i class="fas fa-book mr-2"></i>Library
+          </a>
+        </nav>
+      </div>
+      <div>
+        <button class="bg-teal-600 text-white py-2 px-4 rounded mb-4">Sign Up</button>
+        <button class="text-gray-700">Log in</button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-8">
+      <div class="max-w-4xl mx-auto">
+        <!-- Hero Section -->
+        <div class="text-center mb-12 animate-on-load">
+          <h1 class="text-4xl font-bold mb-4">Prompt Engineering & Version Control</h1>
+          <p class="text-xl text-gray-600 mb-8">The professional platform for managing, versioning, and collaborating on AI prompts</p>
+          <button class="bg-teal-600 text-white py-3 px-6 rounded-lg hover:bg-teal-700">Get Started Free →</button>
+        </div>
+
+        <!-- Feature Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 animate-on-load">
+            <i class="fas fa-code-branch text-teal-600 text-2xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-3">Version Control</h3>
+            <p class="text-gray-600 mb-4">Track changes, manage versions, and roll back to previous prompt iterations</p>
+            <button class="text-teal-600 hover:text-teal-700">Learn more →</button>
+          </div>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 animate-on-load">
+            <i class="fas fa-users text-teal-600 text-2xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-3">Team Collaboration</h3>
+            <p class="text-gray-600 mb-4">Share prompts, review changes, and collaborate with your team in real-time</p>
+            <button class="text-teal-600 hover:text-teal-700">Learn more →</button>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 animate-on-load">
+            <i class="fas fa-chart-line text-teal-600 text-2xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-3">Performance Tracking</h3>
+            <p class="text-gray-600 mb-4">Monitor prompt effectiveness and optimize based on real usage data</p>
+            <button class="text-teal-600 hover:text-teal-700">Learn more →</button>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 animate-on-load">
+            <i class="fas fa-shield-alt text-teal-600 text-2xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-3">Security & Control</h3>
+            <p class="text-gray-600 mb-4">Enterprise-grade security with role-based access control</p>
+            <button class="text-teal-600 hover:text-teal-700">Learn more →</button>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 animate-on-load">
+            <i class="fas fa-sync text-teal-600 text-2xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-3">API Integration</h3>
+            <p class="text-gray-600 mb-4">Seamlessly integrate prompt versioning into your existing workflow</p>
+            <button class="text-teal-600 hover:text-teal-700">Learn more →</button>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 animate-on-load">
+            <i class="fas fa-history text-teal-600 text-2xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-3">Change History</h3>
+            <p class="text-gray-600 mb-4">Complete audit trail of all prompt modifications and deployments</p>
+            <button class="text-teal-600 hover:text-teal-700">Learn more →</button>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center mt-12 p-8 bg-gray-100 rounded-lg animate-on-load">
+          <h2 class="text-2xl font-semibold mb-4">Ready to streamline your prompt management?</h2>
+          <p class="text-gray-600 mb-6">Join thousands of teams already using Promptly.ai</p>
+          <button class="bg-teal-600 text-white py-2 px-6 rounded hover:bg-teal-700">Start Free Trial</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="flex justify-center items-center space-x-4 py-4 text-gray-500 text-sm">
+    <a href="#">Pro</a>
+    <a href="#">Enterprise</a>
+    <a href="#">Store</a>
+    <a href="#">Blog</a>
+    <a href="#">Careers</a>
+    <a href="#">English (English)</a>
+  </footer>
+ </body>
+</html> 

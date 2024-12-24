@@ -1,0 +1,134 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Spaces - Promptly.ai</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js"></script>
+ </head>
+ <body class="bg-gray-50 font-sans">
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <div class="w-64 bg-gray-100 p-4 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center mb-6">
+          <img alt="Promptly.ai logo" class="mr-2" height="24" src="https://storage.googleapis.com/a1aa/image/G3eEgeLbKWmYOEpUARAheaefnYE0WZQefXpbiK5fFee5JWH4PB.jpg" width="24"/>
+          <span class="text-xl font-semibold">promptly.ai</span>
+        </div>
+        <button class="bg-white border border-gray-300 text-gray-700 py-2 px-4 rounded mb-6 flex items-center">
+          <span>New Space</span>
+          <kbd class="ml-2 bg-gray-200 text-gray-500 px-2 py-1 rounded">Ctrl S</kbd>
+        </button>
+        <nav class="space-y-4">
+          <a class="flex items-center text-gray-700 hover:text-gray-900" href="/">
+            <i class="fas fa-home mr-2"></i>Home
+          </a>
+          <a class="flex items-center text-gray-700 hover:text-gray-900" href="/discover">
+            <i class="fas fa-globe mr-2"></i>Discover
+          </a>
+          <a class="flex items-center text-teal-600" href="#">
+            <i class="fas fa-star mr-2"></i>Spaces
+          </a>
+          <a class="flex items-center text-gray-700 hover:text-gray-900" href="/library">
+            <i class="fas fa-book mr-2"></i>Library
+          </a>
+        </nav>
+      </div>
+      <div class="sidebar-bottom">
+        <!-- This will be populated by JavaScript based on auth state -->
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-8 overflow-y-auto">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex justify-between items-center mb-8 animate-on-load">
+          <h1 class="text-3xl font-bold">Your Spaces</h1>
+          <button class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700">
+            <i class="fas fa-plus mr-2"></i>Create Space
+          </button>
+        </div>
+
+        <!-- Spaces Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 grid-animate">
+          <!-- Recent Spaces -->
+          <div class="card bg-white p-6 rounded-lg border border-gray-200">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center">
+                <i class="fas fa-project-diagram text-teal-600 text-xl mr-3"></i>
+                <h3 class="text-lg font-semibold">Marketing Prompts</h3>
+              </div>
+              <span class="text-sm text-gray-500">Updated 2h ago</span>
+            </div>
+            <p class="text-gray-600 mb-4">Collection of marketing and copywriting prompts</p>
+            <div class="flex items-center justify-between">
+              <div class="flex -space-x-2">
+                <img class="w-8 h-8 rounded-full border-2 border-white" src="https://ui-avatars.com/api/?name=John+Doe" alt="User"/>
+                <img class="w-8 h-8 rounded-full border-2 border-white" src="https://ui-avatars.com/api/?name=Jane+Smith" alt="User"/>
+              </div>
+              <button class="text-teal-600 hover:text-teal-700">Open →</button>
+            </div>
+          </div>
+
+          <div class="card bg-white p-6 rounded-lg border border-gray-200">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center">
+                <i class="fas fa-code text-teal-600 text-xl mr-3"></i>
+                <h3 class="text-lg font-semibold">Code Assistant</h3>
+              </div>
+              <span class="text-sm text-gray-500">Updated 1d ago</span>
+            </div>
+            <p class="text-gray-600 mb-4">Programming and development prompts</p>
+            <div class="flex items-center justify-between">
+              <div class="flex -space-x-2">
+                <img class="w-8 h-8 rounded-full border-2 border-white" src="https://ui-avatars.com/api/?name=Alex+Johnson" alt="User"/>
+              </div>
+              <button class="text-teal-600 hover:text-teal-700">Open →</button>
+            </div>
+          </div>
+
+          <div class="card bg-white p-6 rounded-lg border border-gray-200">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center">
+                <i class="fas fa-paint-brush text-teal-600 text-xl mr-3"></i>
+                <h3 class="text-lg font-semibold">Creative Writing</h3>
+              </div>
+              <span class="text-sm text-gray-500">Updated 3d ago</span>
+            </div>
+            <p class="text-gray-600 mb-4">Story and content creation prompts</p>
+            <div class="flex items-center justify-between">
+              <div class="flex -space-x-2">
+                <img class="w-8 h-8 rounded-full border-2 border-white" src="https://ui-avatars.com/api/?name=Sarah+Wilson" alt="User"/>
+                <img class="w-8 h-8 rounded-full border-2 border-white" src="https://ui-avatars.com/api/?name=Mike+Brown" alt="User"/>
+              </div>
+              <button class="text-teal-600 hover:text-teal-700">Open →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="mt-12 animate-on-load">
+          <h2 class="text-2xl font-semibold mb-6">Recent Activity</h2>
+          <div class="bg-white rounded-lg border border-gray-200 divide-y">
+            <div class="p-4 flex items-center">
+              <img class="w-10 h-10 rounded-full mr-4" src="https://ui-avatars.com/api/?name=John+Doe" alt="User"/>
+              <div>
+                <p class="text-gray-800"><span class="font-semibold">John Doe</span> updated Marketing Prompts</p>
+                <p class="text-sm text-gray-500">2 hours ago</p>
+              </div>
+            </div>
+            <div class="p-4 flex items-center">
+              <img class="w-10 h-10 rounded-full mr-4" src="https://ui-avatars.com/api/?name=Jane+Smith" alt="User"/>
+              <div>
+                <p class="text-gray-800"><span class="font-semibold">Jane Smith</span> created a new version</p>
+                <p class="text-sm text-gray-500">5 hours ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </body>
+</html> 

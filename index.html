@@ -1,0 +1,116 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Promptly.ai Clone
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <script src="script.js"></script>
+ </head>
+ <body class="bg-gray-50 font-sans">
+  <div class="flex h-screen">
+   <!-- Sidebar -->
+   <div class="w-64 bg-gray-100 p-4 flex flex-col justify-between">
+    <div>
+     <div class="flex items-center mb-6">
+      <img alt="Promptly.ai logo" class="mr-2" height="24" src="https://storage.googleapis.com/a1aa/image/G3eEgeLbKWmYOEpUARAheaefnYE0WZQefXpbiK5fFee5JWH4PB.jpg" width="24"/>
+      <span class="text-xl font-semibold">
+       promptly.ai
+      </span>
+     </div>
+     <button class="bg-white border border-gray-300 text-gray-700 py-2 px-4 rounded mb-6 flex items-center">
+      <span>
+       New Thread
+      </span>
+      <kbd class="ml-2 bg-gray-200 text-gray-500 px-2 py-1 rounded">
+       Ctrl I
+      </kbd>
+     </button>
+     <nav class="space-y-4">
+      <a class="flex items-center text-teal-600" href="#">
+       <i class="fas fa-home mr-2"></i>Home
+      </a>
+      <a class="flex items-center text-gray-700 hover:text-gray-900" href="/discover">
+       <i class="fas fa-globe mr-2"></i>Discover
+      </a>
+      <a class="flex items-center text-gray-700 hover:text-gray-900" href="/spaces">
+       <i class="fas fa-star mr-2"></i>Spaces
+      </a>
+      <a class="flex items-center text-gray-700 hover:text-gray-900" href="/library">
+       <i class="fas fa-book mr-2"></i>Library
+      </a>
+     </nav>
+    </div>
+    <div class="sidebar-bottom">
+     <!-- This will be populated by JavaScript based on auth state -->
+    </div>
+   </div>
+   <!-- Main Content -->
+   <div class="flex-1 flex flex-col items-center justify-center">
+    <h1 class="text-3xl font-semibold mb-6">
+     What do you want to know?
+    </h1>
+    <div class="w-full max-w-xl">
+     <div class="bg-white border border-gray-300 rounded-lg p-4 flex items-center mb-4">
+      <input class="flex-1 border-none focus:outline-none" placeholder="Ask anything..." type="text"/>
+      <div class="flex items-center space-x-2">
+       <button class="text-gray-500">
+        Focus
+       </button>
+       <button class="text-gray-500">
+        Attach
+       </button>
+       <label class="flex items-center space-x-2">
+        <span class="text-gray-500">
+         Pro
+        </span>
+        <input class="form-checkbox" type="checkbox"/>
+       </label>
+       <button class="text-gray-500">
+        <i class="fas fa-arrow-right">
+        </i>
+       </button>
+      </div>
+     </div>
+     <div class="bg-gray-100 border border-gray-300 rounded-lg p-4 flex items-center">
+      <img alt="Pro offer image" class="w-12 h-12 rounded mr-4" height="50" src="https://storage.googleapis.com/a1aa/image/CEBI5vXJsuqWO5Gpc29UAg5HpFolUWAbIpvQqpLisiLZdgfJA.jpg" width="50"/>
+      <div class="flex-1">
+       <p class="font-semibold">
+        Our Gift to You: Your first month of Pro is free
+       </p>
+       <p class="text-gray-500">
+        Available for a limited time only
+       </p>
+      </div>
+      <button class="bg-gray-200 text-gray-700 py-1 px-3 rounded">
+       Get Pro
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <footer class="flex justify-center items-center space-x-4 py-4 text-gray-500 text-sm">
+   <a href="#">
+    Pro
+   </a>
+   <a href="#">
+    Enterprise
+   </a>
+   <a href="#">
+    Store
+   </a>
+   <a href="#">
+    Blog
+   </a>
+   <a href="#">
+    Careers
+   </a>
+   <a href="#">
+    English (English)
+   </a>
+  </footer>
+ </body>
+</html>

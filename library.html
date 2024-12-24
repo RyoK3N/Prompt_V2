@@ -1,0 +1,183 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Library - Promptly.ai</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js"></script>
+ </head>
+ <body class="bg-gray-50 font-sans">
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <div class="w-64 bg-gray-100 p-4 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center mb-6">
+          <img alt="Promptly.ai logo" class="mr-2" height="24" src="https://storage.googleapis.com/a1aa/image/G3eEgeLbKWmYOEpUARAheaefnYE0WZQefXpbiK5fFee5JWH4PB.jpg" width="24"/>
+          <span class="text-xl font-semibold">promptly.ai</span>
+        </div>
+        <button class="bg-white border border-gray-300 text-gray-700 py-2 px-4 rounded mb-6 flex items-center">
+          <span>Add to Library</span>
+          <kbd class="ml-2 bg-gray-200 text-gray-500 px-2 py-1 rounded">Ctrl L</kbd>
+        </button>
+        <nav class="space-y-4">
+          <a class="flex items-center text-gray-700 hover:text-gray-900" href="/">
+            <i class="fas fa-home mr-2"></i>Home
+          </a>
+          <a class="flex items-center text-gray-700 hover:text-gray-900" href="/discover">
+            <i class="fas fa-globe mr-2"></i>Discover
+          </a>
+          <a class="flex items-center text-gray-700 hover:text-gray-900" href="/spaces">
+            <i class="fas fa-star mr-2"></i>Spaces
+          </a>
+          <a class="flex items-center text-teal-600" href="#">
+            <i class="fas fa-book mr-2"></i>Library
+          </a>
+        </nav>
+      </div>
+      <div class="sidebar-bottom">
+        <!-- This will be populated by JavaScript based on auth state -->
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-8 overflow-y-auto">
+      <div class="max-w-6xl mx-auto">
+        <!-- Header Section -->
+        <div class="flex justify-between items-center mb-8 animate-on-load">
+          <div>
+            <h1 class="text-3xl font-bold mb-2">Your Library</h1>
+            <p class="text-gray-600">Organize and access your favorite prompts</p>
+          </div>
+          <div class="flex space-x-4">
+            <div class="relative">
+              <input type="text" placeholder="Search library..." 
+                     class="pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"/>
+              <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+            </div>
+            <button class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700">
+              <i class="fas fa-plus mr-2"></i>New Collection
+            </button>
+          </div>
+        </div>
+
+        <!-- Collections Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 grid-animate">
+          <!-- Collection Cards -->
+          <div class="card bg-white p-6 rounded-lg border border-gray-200">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center">
+                <i class="fas fa-folder text-teal-600 text-xl mr-3"></i>
+                <h3 class="text-lg font-semibold">Favorite Prompts</h3>
+              </div>
+              <button class="text-gray-400 hover:text-gray-600">
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+            </div>
+            <p class="text-gray-600 mb-4">15 prompts • Last used 2h ago</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500">Created by you</span>
+              <button class="text-teal-600 hover:text-teal-700">View →</button>
+            </div>
+          </div>
+
+          <div class="card bg-white p-6 rounded-lg border border-gray-200">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center">
+                <i class="fas fa-folder text-teal-600 text-xl mr-3"></i>
+                <h3 class="text-lg font-semibold">Writing Templates</h3>
+              </div>
+              <button class="text-gray-400 hover:text-gray-600">
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+            </div>
+            <p class="text-gray-600 mb-4">8 prompts ��� Last used 1d ago</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500">Shared with team</span>
+              <button class="text-teal-600 hover:text-teal-700">View →</button>
+            </div>
+          </div>
+
+          <div class="card bg-white p-6 rounded-lg border border-gray-200">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center">
+                <i class="fas fa-folder text-teal-600 text-xl mr-3"></i>
+                <h3 class="text-lg font-semibold">Code Snippets</h3>
+              </div>
+              <button class="text-gray-400 hover:text-gray-600">
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+            </div>
+            <p class="text-gray-600 mb-4">23 prompts • Last used 3d ago</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500">Personal collection</span>
+              <button class="text-teal-600 hover:text-teal-700">View →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Prompts -->
+        <div class="animate-on-load">
+          <h2 class="text-2xl font-semibold mb-6">Recent Prompts</h2>
+          <div class="bg-white rounded-lg border border-gray-200">
+            <div class="p-4 hover:bg-gray-50 transition-colors border-b">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <i class="fas fa-file-alt text-teal-600 mr-3"></i>
+                  <div>
+                    <h4 class="font-medium">Blog Post Generator</h4>
+                    <p class="text-sm text-gray-500">Used 2 hours ago</p>
+                  </div>
+                </div>
+                <button class="text-teal-600 hover:text-teal-700">Edit</button>
+              </div>
+            </div>
+
+            <div class="p-4 hover:bg-gray-50 transition-colors border-b">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <i class="fas fa-file-alt text-teal-600 mr-3"></i>
+                  <div>
+                    <h4 class="font-medium">Email Template</h4>
+                    <p class="text-sm text-gray-500">Used 5 hours ago</p>
+                  </div>
+                </div>
+                <button class="text-teal-600 hover:text-teal-700">Edit</button>
+              </div>
+            </div>
+
+            <div class="p-4 hover:bg-gray-50 transition-colors">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <i class="fas fa-file-alt text-teal-600 mr-3"></i>
+                  <div>
+                    <h4 class="font-medium">Social Media Post</h4>
+                    <p class="text-sm text-gray-500">Used 1 day ago</p>
+                  </div>
+                </div>
+                <button class="text-teal-600 hover:text-teal-700">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 animate-on-load">
+          <div class="bg-white p-6 rounded-lg border border-gray-200">
+            <h3 class="text-gray-500 text-sm mb-2">Total Prompts</h3>
+            <p class="text-3xl font-semibold">46</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg border border-gray-200">
+            <h3 class="text-gray-500 text-sm mb-2">Collections</h3>
+            <p class="text-3xl font-semibold">3</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg border border-gray-200">
+            <h3 class="text-gray-500 text-sm mb-2">Used This Week</h3>
+            <p class="text-3xl font-semibold">28</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </body>
+</html> 
